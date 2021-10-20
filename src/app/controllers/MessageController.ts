@@ -34,6 +34,20 @@ class MessageController {
 
     response.status(201).json(message);
   }
+
+  async showLastThreeMessages(request: Request, response: Response) {
+    const messages = await PrismaClient.message.findMany({
+      take: 3,
+      orderBy: {
+        created_at: 'desc',
+      },
+      include: {
+        user: true,
+      },
+    });
+
+    response.status(200).json(messages);
+  }
 }
 
 export default new MessageController();

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import 'dotenv/config';
 import http from 'http';
 import cors from 'cors';
@@ -25,5 +26,4 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-// eslint-disable-next-line no-console
 server.listen(4000, () => console.log('🔥 Server Running at http://localhost:4000'));
