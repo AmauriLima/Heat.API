@@ -5,5 +5,6 @@ const authRoutes = Router();
 
 authRoutes.get('/github', AuthController.signInWithGithub);
 authRoutes.get('/signin/callback', AuthController.signInCallback);
+authRoutes.post('/authenticate', AuthController.authenticate);
 
 export { authRoutes };

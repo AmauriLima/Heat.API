@@ -3,6 +3,7 @@ import { routes } from './routes';
 
 const app = express();
 
+app.use(express.json());
 app.use(routes);
 
 // eslint-disable-next-line no-console
