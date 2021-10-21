@@ -8,6 +8,6 @@ const routes = Router();
 
 routes.use('/auth', authRoutes);
 routes.use('/profile', ensureAuthenticated, profileRoutes);
-routes.use('/message', ensureAuthenticated, messageRoutes);
+routes.use('/message', messageRoutes);
 
 export { routes };
